@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Person',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('first_name', models.CharField(max_length=50, verbose_name='Имя')),
                 ('last_name', models.CharField(max_length=50, verbose_name='Фамилия')),
                 ('email', models.EmailField(max_length=254, verbose_name='Эл. почта')),

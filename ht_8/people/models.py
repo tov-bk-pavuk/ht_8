@@ -7,5 +7,5 @@ class Person(models.Model):
     email = models.EmailField(verbose_name='Эл. почта')
 
     def __str__(self):
-        return f'имя: {self.first_name} фамилия:{self.last_name} ' \
-               f'Почта:{self.email}'
+        return f'ИМЯ: {self.first_name} ФАМИЛИЯ: {self.last_name} ' \
+               f'ПОЧТА: {self.email}'
