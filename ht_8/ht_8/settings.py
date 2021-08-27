@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'people.apps.PeopleConfig',
+
+    'logs.apps.LogsConfig',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'logs.middleware.LogMiddleware.wrap_log'
 ]
 
 ROOT_URLCONF = 'ht_8.urls'
