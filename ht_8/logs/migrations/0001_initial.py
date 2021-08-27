@@ -14,10 +14,13 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Logs',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('path', models.CharField(max_length=200, verbose_name='Путь')),
                 ('timestamp', models.TimeField(verbose_name='Дата-Время')),
-                ('method', models.CharField(choices=[('GT', 'GET'), ('PS', 'POST'), ('PT', 'PUT'), ('DL', 'DELETE')], max_length=200, verbose_name='Метод')),
+                ('method', models.CharField(choices=[('GT', 'GET'), ('PS', 'POST'),
+                                                     ('PT', 'PUT'), ('DL', 'DELETE')],
+                                            max_length=200, verbose_name='Метод')),
             ],
         ),
     ]

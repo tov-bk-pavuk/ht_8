@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    # 'logs.middleware.LogMiddleware.wrap_log'
+    'logs.middleware.LogMiddleware.wrap_log'
 ]
 
 ROOT_URLCONF = 'ht_8.urls'
