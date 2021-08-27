@@ -9,7 +9,7 @@ class Logs(models.Model):
         ('PT', 'PUT'),
         ('DL', 'DELETE'),
     )
-    path = models.CharField(verbose_name='Путь')
-    timestamp = models.TimeField(label='Дата-Время')
-    method = models.CharField(label='Метод',
+    path = models.CharField(verbose_name='Путь', max_length=200)
+    timestamp = models.TimeField(verbose_name='Дата-Время')
+    method = models.CharField(verbose_name='Метод',
                               max_length=200, choices=CHOICES)

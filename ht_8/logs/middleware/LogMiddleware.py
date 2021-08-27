@@ -8,8 +8,9 @@ def wrap_log(get_response):
     # One-time configuration and initialization.
 
     def logging(request):
-        if request.method == 'POST':
-            Logs.objects.create(request.path, timestamp, 'PS')
+        if request.method == 'GET':
+            Logs.objects.create(path=request.path,
+                                timestamp=timestamp, method='GT')
         # Code to be executed for each request before
         # the view (and later middleware) are called.
         response = get_response(request)
