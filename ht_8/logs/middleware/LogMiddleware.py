@@ -11,12 +11,9 @@ def wrap_log(get_response):
 
     def logging(request):
         if request.path.startswith('/admin') is False:
-            if request.method == 'GET':
-                Logs.objects.create(path=request.path,
-                                    timestamp=timestamp, method='GT')
-            elif request.method == 'POST':
-                Logs.objects.create(path=request.path,
-                                    timestamp=timestamp, method='PS')
+            Logs.objects.create(path=request.path,
+                                timestamp=timestamp, method=request.method)
+
         # Code to be executed for each request before
         # the view (and later middleware) are called.
         response = get_response(request)
